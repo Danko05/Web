@@ -1,0 +1,23 @@
+.header__nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__nav-item {
+    margin-right: 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../photos/logo.png");
+    background-repeat: no-repeat;
+    background-position: right 23px top;
+}
+
+.header__title {
+    font-weight: 150;
+    font-size: 24px;
+}

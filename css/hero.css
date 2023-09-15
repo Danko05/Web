@@ -1,0 +1,36 @@
+.hero {
+    background-image: url("../photos/trafalgar-1.png");
+    background-repeat: no-repeat;
+    background-position: right 23px top  ;
+    /*background:url("../photos/trafalgar.png") no-repeat right 23px top*/
+    margin-top: 20vh;
+    height: 434px;
+
+
+}
+
+
+.hero__title {
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    color: #000;
+    width: 241.661px;
+
+
+
+}
+
+.hero__paragraph {
+    font-size: 14px;
+    line-height: 30px;
+    width: 360.139px;
+    color: #7D7987;
+
+}
+
+.hero__buttons {
+    margin-top: 5vh;
+}
+
+
