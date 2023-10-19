@@ -1,0 +1,183 @@
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
+
+.Left__side {
+    display: flex;
+    flex-direction: column;
+}
+
+.Manage{
+    width: 100%;
+    height: 60%;
+
+    position: relative;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16%;
+    border-left: 1px solid gray;
+    margin-top: 10px;
+}
+
+.Manage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70%;
+    border-top: 1px solid gray;
+    width: 90%;
+
+}
+.Sort__by{
+    font-size: 18px;
+    color:dimgray;
+
+
+}
+.Manage__shoes{
+    color:dimgray;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.Sort{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 2px solid #007BFF;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.circle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 5px);
+}
+
+.button.clicked .circle {
+    left: calc(100% - 15px);
+}
+
+
+.expenses{
+    width: 75%;
+}
+.Count__total{
+    margin-top: -60px;
+    font-size: 20px;
+    color: dimgray;
+    font-weight: bold;
+    width: 150%;
+
+}
+.button__count{
+    display: flex;
+    justify-content: center;
+}
+.Count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 10px;
+    width: 80px;
+    height: 20px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.Total{
+    color:dimgray;
+    margin-left: 10px;
+    width: 240%;
+}
+.card__photos{
+    width: 235px;
+    height: 180px;
+}
+
+.card{
+    display: flex;
+}
+.card1,.card2,.card3,.card4{
+    width: 235px;
+    height: 470px;;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top:10px;
+    box-shadow: 0 0 65px #E5E9F666;
+    margin-left: 30px;
+    color: dimgray;
+}
+.Brand{
+    padding-left: 10px;
+}
+.Details{
+    font-size: 22px;
+    padding: 10px;
+}
+.card__button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Edit{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}
+.Remove{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}

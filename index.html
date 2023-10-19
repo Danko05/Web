@@ -2,132 +2,309 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live coding website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <header class="header">
-        <nav class=header__nav">
-            <ul>
-                <li class="header__nav-item"><a href="">Home</a></li>
-                <li class="header__nav-item"><a href="">Fine a doctor</a></li>
-                <li class="header__nav-item"><a href="">Apps</a></li>
-                <li class="header__nav-item"><a href="">Testimonials</a></li>
-                <li class="header__nav-item"><a href="">About us</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<section class="container ">
-    <div class="hero__inner hero">
-        <h1 class="hero__title">Download our mobile apps</h1>
-        <h2 class="hero__title2">______</h2>
-        <p class="hero__paragraph">Our dedicated patient engagement app and web portal allow you to access
-            information
-            instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p>
-        <div class="hero__buttons">
-            <button class="default-button">Download</button>
+<div class="hero">
+    <div class="tab">
+        <div class="inf__pages">
+            <h1 class="shoes">Shoes</h1>
+            <button class="tablinks" id = "home_button" onclick="OpenShoes(event, 'My shoes')">My shoes</button>
+            <button class="tablinks" onclick="OpenShoes(event, 'Create shoes')"> Create shoes </button>
         </div>
-    </div>
-</section>
-
-<div class="container2">
-    <div class="column">
-
-        <h2 class="hero2__title">Check out our latest article</h2>
-        <h3 class="hero2__title2">________</h3>
-
+        <div class="Search__Clear">
+            <input class="Type__something">
+            <a href="" class="Search">Search</a>
+            <a href="" class="Clear">Clear</a>
+        </div>
     </div>
 </div>
 
-<div class="container3">
-
-    <div class="card">
-
-            <img src="../photos/image 2.png" class="card__photo">
-
-        <div class="card__text">
-            <h3>Disease detection, check up in the laboratory</h3>
-            <p>In this case, the role of the health laboratory is very important to do a disease detection...</p>
-            <button class="card__button">Read more  <img src="../photos/pointer.png"></button>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="../photos/image 3.png " class="card__photo">
-        <div class="card__text">
-            <h3>Herbal medicines that are safe for consumption 2</h3>
-            <p>Herbal medicine is very widely used at this time because of its very good for your health...</p>
-            <button class="card__button">Read more <img src="../photos/pointer.png"></button>
-        </div>
-    </div>
-
-        <div class="card">
-
-                <img src="../photos/image 4.png" class="card__photo">
-
-            <div class="card__text">
-                <h3>Natural care for healthy facial skin</h3>
-                <p>A healthy lifestyle should start from now and also for your skin health. There are some...</p>
-                <button class="card__button">Read more <img src="../photos/pointer.png"></button>
-            </div>
-            </div>
-                <img src="../photos/Vector.png" id="vector">
-            <div>
-        </div>
-
-    </div>
-<div class="card__button2">
-    <button class="card__button3">View all</button>
-</div>
-
-<div class="bottom">
-    <div class="feedbacks">
-        <div class="title">
-            <h1 class="feedbacks__title">What our customer are saying</h1>
-            <h2 class="feedbacks__title2"> ____</h2>
-        </div>
-
-        <div class="customer">
-            <div class="initials">
-                    <img src="../photos/human.png" class="feedbacks__photos">
-                <div class="name">
-                    <p1 class="feedbacks__paragraph">Edward Newgate</p1>
-                    <p2 class="feedbacks__paragraph2">Founder Circle</p2>
-                </div>
-                <div class="review">
-                    <p2 class="feedbacks__paragraph3"> “Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p2>
+<div id="My shoes" class="tabcontent">
+    <section class="main">
+        <div class="Left__side">
+            <div class="Manage">
+                <h1 class="Manage__shoes">Manage shoes</h1>
+                <div class="Sort">
+                    <h2 class="Sort__by">Sorted by the most<br>
+                        expensive shoes</h2>
+                    <button class="button">
+                        <span class="circle"></span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="more_feedback">
-            <div class="left__arrow">
-                <img src="../photos/Frame l.png" class="left__arrow" >
+
+
+            <div class="expenses">
+                <h2 class="Count__total">Count total daily expenses:</h2>
+                <a href="" class="Count">
+                    <div>
+                        Count
+                    </div>
+                </a>
+                <h2 class="Total">Total expenses:</h2>
             </div>
 
-        <div class="pages">
-            <img src="../photos/slider.png" class="pages" >
         </div>
 
-        <div class="right__arrow">
-            <img src="../photos/Frame r.png" class="right__arrow">
+        <div id="Right__side">
+
+
+
         </div>
+
+
+    </section>
+</div>
+
+<div id="Create shoes" class="tabcontent">
+    <div class="Create">
+        <h1 class="create__shoes">Create Shoes</h1>
+        <h2 class="brand">Brand</h2>
+        <input id="Brand">
+        <h2 class="information">Information</h2>
+        <input id="information">
+        <h2 class="price">Price</h2>
+        <input id="price">
+        <a href="#" class="button__create">Create Shoes</a>
     </div>
 </div>
 
-<section class="footer">
-    <img src="../photos/element inf.png" class="element__inf">
-    <img src="../photos/trafalgar.png" class="inf__logo">
-    <div class="navigation">
-            <h3 class="Company">Company</h3>
-            <h3 class="Region"> Region</h3>
-            <h3 class="Help"> Help</h3>
-    </div>
-</section>
+
+<script>
+
+
+
+
+
+    let shoes = [
+        { index: 0, brand: 'Nike', price: 50, card: "dsfsfd"},
+        { index: 1, brand: 'Adidas', price: 80, card: document.querySelector('.card2') },
+        { index: 2, brand: 'Puma', price: 30, card: document.querySelector('.card3') },
+        { index: 3, brand: 'Adidas', price: 280, card: document.querySelector('.card4') }
+    ];
+
+    let originalOrder = Array.from(shoes);
+    let sorted = false;
+    let foundShoes = shoes;
+    document.querySelector('.button').addEventListener('click', function() {
+        this.classList.toggle('clicked');
+        if (!sorted) {
+
+            shoes.sort((a, b) => b.price - a.price);
+            sorted = true;
+        } else {
+
+            shoes = Array.from(originalOrder);
+            sorted = false;
+        }
+
+        let container = document.querySelector('#Right__side');
+        container.innerHTML = '';
+        shoes.forEach(shoe => {
+            container.appendChild(shoe.card);
+        });
+    });
+
+
+    document.querySelector('.Search').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        let searchBrand = document.querySelector('.Type__something').value.toLowerCase();
+        foundShoes = shoes.filter(shoe => shoe.brand.toLowerCase().includes(searchBrand));
+
+        shoes.forEach(shoe => {
+            if (foundShoes.includes(shoe)) {
+                shoe.card.style.display = 'block';
+            } else {
+                shoe.card.style.display = 'none';
+            }
+        });
+    });
+
+    let total = 0;
+
+    document.querySelector('.Count').addEventListener('click', function(event) {
+        event.preventDefault();
+        total = foundShoes.reduce((sum, shoe) => sum + shoe.price, 0);
+        document.querySelector('.Total').textContent = 'Total expenses: ' + total + '$';
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function OpenShoes(evt, shoesName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(shoesName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    OpenShoes({ currentTarget: document.getElementById("home_button") }, "My shoes");
+
+
+
+
+
+    // Оновлений код для створення об'єкта та виведення його на екран
+    document.querySelector('.button__create').addEventListener('click', function() {
+        // Отримайте дані з полів вводу
+
+        const brand = document.querySelector('#Brand').value;
+        const information = document.querySelector('#information').value;
+        const price = document.querySelector('#price').value;
+        // Перевірте, чи price є числом перед збереженням
+        if (isNaN(price)) {
+            Alert_price();
+            return;
+        }
+        // Створіть новий об'єкт з отриманими даними
+        const newShoe = {
+            brand: brand,
+            information: information,
+            price: parseInt(price), // Перетворення ціни в ціле число
+        };
+
+        // Додайте новий об'єкт до масиву shoes
+        shoes.push(newShoe);
+
+        // Очистіть поля вводу
+        document.querySelector('#Brand').value = '';
+        document.querySelector('#information').value = '';
+        document.querySelector('#price').value = '';
+
+        // Викликайте функцію для оновлення списку черевиків на сторінці "My shoes"
+        updateShoeList();
+
+    });
+
+    function updateShoeList() {
+        const container = document.querySelector('#Right__side');
+        container.innerHTML = '';
+        let searchBrand = document.querySelector('.Type__something').value.toLowerCase();
+
+        foundShoes = shoes.filter(shoe => shoe.brand.toLowerCase().includes(searchBrand));
+
+        foundShoes.forEach(shoe => {
+            const newCard = document.createElement('div');
+            newCard.classList.add('card');
+            newCard.innerHTML = `
+                    <img src="../Web lab3/photos/default-image.png" class="card__photos">
+                    <h1 class="Brand">${shoe.brand}</h1>
+                    <h2 class="Details">${shoe.information}<br>Price: ${shoe.price}$</h2>
+                    <div class="card__button">
+                        <a href="#" onclick="openEditPopup(${shoe.index})">Edit</a>
+                        <a href="" class="Remove">Remove</a>
+                    </div>
+                `;
+
+            container.appendChild(newCard);
+        });
+    }
+
+    function openEditPopup(index) {
+        const shoe = shoes.find(item => item.index === index);
+
+        if (shoe) {
+            const brand = prompt('Edit Brand:', shoe.brand);
+            const information = prompt('Edit Information:', shoe.information);
+            let price = prompt('Edit Price:', shoe.price);
+
+            price = parseInt(price);
+
+            if (!isNaN(price)) {
+                foundShoes.find(item => item.index === index).brand = brand;
+                foundShoes.find(item => item.index === index).information = information;
+                foundShoes.find(item => item.index === index).price = price;
+
+                updateShoeList();
+            } else {
+                Alert_price();
+            }
+        } else {
+            console.error('Shoe not found.');
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function Alert_price() {
+        alert("Price must be an integer");
+    }
+
+    const priceInput = document.querySelector('.price');
+
+    priceInput.addEventListener('input', function() {
+        const priceValue = this.value.trim();
+
+        // Видаляємо будь-які не-цифрові символи з введеного тексту
+        const cleanedPrice = priceValue.replace(/[^0-9]/g, '');
+
+        if (priceValue !== cleanedPrice) {
+            // Якщо введено не-цифрові символи, виводимо `alert` і очищаємо поле
+            Alert_price();
+            this.value = '';
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    updateShoeList();
+
+
+
+
+</script>
+
 </body>
-
 </html>

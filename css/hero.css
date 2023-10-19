@@ -1,36 +1,76 @@
 .hero {
-    background-image: url("../photos/trafalgar-1.png");
-    background-repeat: no-repeat;
-    background-position: right 23px top  ;
-    /*background:url("../photos/trafalgar.png") no-repeat right 23px top*/
-    margin-top: 20vh;
-    height: 434px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    color:dimgray;
+}
+.inf__pages{
+    display: flex;
+    flex-direction: row;
+    margin-left: -80px;
+    text-decoration: none;
 
 }
-
-
-.hero__title {
+.shoes{
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
     font-weight: bold;
-    line-height: 1.2;
-    letter-spacing: 2px;
-    color: #000;
-    width: 241.661px;
-
-
-
+    padding-right: 30px
 }
-
-.hero__paragraph {
-    font-size: 14px;
-    line-height: 30px;
-    width: 360.139px;
-    color: #7D7987;
-
-}
-
-.hero__buttons {
-    margin-top: 5vh;
+.create__shoes{
+    margin-left: 20px;
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 
+.my__shoes{
+    margin-left: 20px;
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+.Type__something{
+    height: 20px;
+    width: 200px;
+}
+
+
+.Search {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #007BFF;
+    background-color: #ffffff;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}
+.Clear {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: red;
+    background-color: #ffffff;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}
+.Search__Clear{
+    margin-left: 300px;
+}
