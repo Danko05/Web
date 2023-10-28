@@ -14,37 +14,50 @@ let shoes = [
 ];
 
 const main=document.getElementById("shoeList")
-function updateDOM(providedData = shoes) {
-    main.innerHTML = '';
 
-    providedData.forEach((item, index) => {
-        const element = document.createElement('div');
-        element.classList.add('shoe');
-        element.innerHTML = `
+const searchInput=document.getElementById("search_input")
+function updateDOM(sorted = false) {
+
+    console.log('dfsfdsf')
+    main.innerHTML = '';
+    fetch('http://localhost:8080/shoes')
+        .then(response => response.json())
+        .then(data => {
+            shoes = data;
+            if (sorted){shoes.sort((a, b) => a.price - b.price);}
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredShoes = shoes.filter(shoe =>
+                shoe.brand.toLowerCase().includes(searchTerm)
+            );
+            console.log(data);
+            filteredShoes.forEach((item, index) => {
+                const element = document.createElement('div');
+                element.classList.add('shoe');
+                element.innerHTML = `
             <h1 class="Name">${item.brand}</h1>
             <h2 class="phoragraph">${item.information}</h2>
             <h2 class="sale">Price: ${item.price}$</h2>
-            <a href="" class="Edit" onclick="editShoe(${index})">Edit</a>
-            <a href="" class="Remove" onclick="removeShoeByIndex(this)">Remove</a>`;
+            <a href="" class="Edit" onclick="editShoe(${item.id})">Edit</a>
+            <a href="" class="Remove" onclick="removeShoeByIndex(${item.id})">Remove</a>`;
 
-        main.appendChild(element);
-    });
-    let total = providedData.reduce((sum, shoe) =>  sum + shoe.price, 0);
-    document.querySelector('.Total').textContent = 'Total expenses: ' + total + '$';
+                main.appendChild(element);
+            });
+            let total = filteredShoes.reduce((sum, shoe) =>  sum + shoe.price, 0);
+            document.querySelector('.Total').textContent = 'Total expenses: ' + total + '$';
+
+        })
+        .catch(error => console.error('Помилка при отриманні даних:', error));
+
+
 
 }
+
+searchInput.addEventListener('input', updateDOM);
 
 updateDOM();
 
-const searchInput=document.getElementById("search_input")
-function searchShoes() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredShoes = shoes.filter(shoe =>
-        shoe.brand.toLowerCase().includes(searchTerm)
-    );
-    updateDOM(filteredShoes);
-}
-searchInput.addEventListener('input', searchShoes);
+
+
 
 function OpenShoes(evt, shoesName) {
     var i, tabcontent, tablinks;
@@ -82,13 +95,26 @@ document.querySelector('.button__create').addEventListener('click', function(eve
             const newShoe = new Shoe(brand,information,price);
 
 
-            shoes.push(newShoe);
-            updateDOM();
+            fetch('http://localhost:8080/shoes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newShoe)
+            })
+                .then(response => response.json())
+                .then(data =>{console.log(data);
+                updateDOM()} )
+                .catch((error) => console.error('Error:', error));
+
+
+
 
             brandInput.value = '';
             informationInput.value = '';
             priceInput.value = '';
             OpenShoes(event, 'My shoes');
+
         } else {
             alert('Ціна не може бути від\'ємною.');
         }
@@ -99,8 +125,8 @@ document.querySelector('.button__create').addEventListener('click', function(eve
 
 
 function sortByPrice() {
-    shoes.sort((a, b) => a.price - b.price);
-    updateDOM();
+
+    updateDOM(sorted = true);
 }
 
 
@@ -113,7 +139,8 @@ document.getElementById('shoeList').addEventListener('click', function(event) {
         const shoeElement = event.target.closest('.shoe');
         if (shoeElement) {
             const index = Array.from(shoeElement.parentNode.children).indexOf(shoeElement);
-            removeShoeByIndex(index);
+            console.log(Array.from(shoeElement.parentNode.children))
+
         }
     }
 });
@@ -122,11 +149,13 @@ document.getElementById('shoeList').addEventListener('click', function(event) {
 let lastEditedIndex=null;
 
 function editShoe(index) {
-    const selectedShoe = shoes[index];
+    const selectedShoe = shoes.filter(shoe => shoe.id == index)[0];
 
     const editBrandInput = document.getElementById('EditBrand');
     const editInformationInput = document.getElementById('EditInformation');
     const editPriceInput = document.getElementById('EditPrice');
+    console.log(shoes)
+    console.log(selectedShoe)
     console.log("before ")
     console.log(lastEditedIndex)
 
@@ -160,23 +189,34 @@ function saveEditedShoes() {
     const editInformationInput = document.getElementById('EditInformation');
     const editPriceInput = document.getElementById('EditPrice');
 
+
     const brand = editBrandInput.value;
     const information = editInformationInput.value;
     const price = parseInt(editPriceInput.value);
 
+   let updatedShoe = new Shoe(brand,information,price);
     if (brand.trim() !== '' && !isNaN(price)) {
         if (price >= 0) {
 
             const selectedIndex = lastEditedIndex;
-            if (selectedIndex >= 0 && selectedIndex < shoes.length) {
-                console.log(shoes[selectedIndex])
+            if (selectedIndex >= 0 ) {
+                fetch(`http://localhost:8080/shoes/${selectedIndex}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(updatedShoe),
+                })
+                    .then(response => response.json())
+                    .then(data => {console.log(data);
+                        updateDOM();
+                       }
+                    )
 
-                shoes[selectedIndex].brand = brand;
-                shoes[selectedIndex].information = information;
-                shoes[selectedIndex].price = price;
-                console.log(shoes[selectedIndex])
-                updateDOM();
+                    .catch((error) => console.error('Error:', error));
+                OpenShoes(event, 'My shoes');
                 OpenShoes({ currentTarget: document.getElementById("home_button") }, "My shoes");
+
             }
         } else {
             alert('Ціна не може бути від\'ємною.');
@@ -186,13 +226,26 @@ function saveEditedShoes() {
     }
 }
 
+
+
+
+
+
+
+
+
 function removeShoeByIndex(index) {
-    if (index >= 0 && index < shoes.length) {
-        shoes.splice(index, 1);
-        updateDOM();
-    }
+    console.log(index)
+    fetch(`http://localhost:8080/shoes/${index}`, {
+        method: 'DELETE',
+    })
+        .then(response => {console.log(response.json())})
+        .then(data => {console.log(data);
+        updateDOM()})
+        .catch((error) => console.error('Error:', error));
+
 }
+updateDOM();
 
-
-
+localStorage.setItem('shoes', JSON.stringify(shoes));
 
