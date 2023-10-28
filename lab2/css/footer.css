@@ -1,0 +1,79 @@
+.footer{
+    background-color: #458FF6;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+
+
+}
+
+.element__inf{
+    position: absolute;
+    left:-3vh;
+    bottom:-3vh;
+    width: 15vh;
+    height: 15vh;
+
+
+
+}
+
+.inf__logo{
+    height: 30%;
+    margin: auto;
+    margin-right: 15%;
+    margin-left: 15%;
+
+}
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin: auto;
+    width: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Company{
+    color:white;
+}
+.Region{
+    color: white;
+}
+
+.Help{
+    color: white;
+
+}
+
+@media screen and (max-width: 1050px){
+    .footer{
+        flex-direction: column;
+    }
+    .element__inf{
+        display: none;
+    }
+    .inf__logo{
+        height: 20px;
+        width: 70px;
+        margin-left: 120px;
+    }
+    .navigation{
+        font-weight: bold;
+        color: white;
+        font-size: 16px;
+        width: 60%;
+    }
+
+}
+
+
+
+
+
+
+
