@@ -1,0 +1,76 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    color:dimgray;
+}
+.inf__pages{
+    display: flex;
+    flex-direction: row;
+    margin-left: -80px;
+    text-decoration: none;
+
+}
+.shoes{
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 30px
+}
+.create__shoes{
+    margin-left: 20px;
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.my__shoes{
+    margin-left: 20px;
+    text-decoration: none;
+    color:dimgray;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+.Type__something{
+    height: 20px;
+    width: 200px;
+}
+
+
+.Search {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #007BFF;
+    background-color: #ffffff;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}
+.Clear {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: red;
+    background-color: #ffffff;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 55px;
+    height: 15px;
+    text-decoration: none;
+}
+.Search__Clear{
+    margin-left: 300px;
+}

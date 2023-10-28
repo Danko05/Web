@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live coding website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero">
+    <div class="tab">
+        <div class="inf__pages">
+            <h1 class="shoes">Shoes</h1>
+            <button class="tablinks" id = "home_button" onclick="OpenShoes(event, 'My shoes')">My shoes</button>
+            <button class="tablinks" onclick="OpenShoes(event, 'Create shoes')"> Create shoes </button>
+            <button class="tablinks" onclick="OpenShoes(event, 'Edit shoes')"> Edit shoes </button>
+        </div>
+        <div class="Search__Clear">
+            <input id="search_input">
+
+        </div>
+    </div>
+</div>
+
+<div id="My shoes" class="tabcontent">
+    <section class="main">
+        <div class="Left__side">
+            <div class="Manage">
+                <h1 class="Manage__shoes">Manage shoes</h1>
+                <div class="Sort">
+                    <h2 class="Sort__by">Sorted by the most<br>
+                        expensive shoes</h2>
+                    <button class="button" id="sort_button" onclick="sortByPrice()">
+                        <span class="circle"></span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="expenses">
+
+                <h2 class="Total" >Total expenses:</h2>
+            </div>
+            <div id="shoesContainer"></div>
+        </div>
+
+        <div id="Right__side">
+            <div id="shoeList" class="vertical-container" style="display: flex; flex-direction: row; margin-left: 40px">
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<div id="Create shoes" class="tabcontent">
+    <div class="Create">
+        <h1 class="create__shoes">Create Shoes</h1>
+        <h2 class="brand">Brand</h2>
+        <input id="Brand">
+        <h2 class="information">Information</h2>
+        <input id="information">
+        <h2 class="price">Price</h2>
+        <input type="number" min = "1" id="price">
+        <a href="#" class="button__create" >Create Shoes</a>
+    </div>
+</div>
+
+
+
+<div id="Edit shoes" class="tabcontent" style="display: none">
+    <div class="Edit__s">
+        <h1 class="edit__shoes">Edit Shoes</h1>
+        <h2 class="brand">Brand</h2>
+        <input id="EditBrand">
+        <h2 class="information">Information</h2>
+        <input id="EditInformation">
+        <h2 class="price">Price</h2>
+        <input type="number" min="1" id="EditPrice">
+        <a href="#" class="button__edit" id="EditShoesButton" onclick="saveEditedShoes()">Edit Shoes</a>
+        <input type="hidden" id="EditIndex">
+    </div>
+</div>
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
