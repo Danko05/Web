@@ -1,0 +1,17 @@
+.Button-Container {
+    display: flex;
+    justify-content: center;
+}
+
+.Card-Button {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 11px;
+    background-color: darkgrey;
+    line-height: 35px;
+}
