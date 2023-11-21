@@ -1,0 +1,88 @@
+.item_photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.Item_pharagraph{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.item_photo img {
+    width: 450px;
+    height: 300px;
+
+}
+.text_item{
+    width: 400px;
+}
+
+.item_filter{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+.filters2{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.Countable_field{
+    height: 25px;
+    border-radius: 10px;
+    border:2px solid black;
+    background-color: white;
+    margin-top: -7px;
+}
+.Selectable_field{
+    height: 25px;
+    border-radius: 10px;
+    border:2px solid black;
+    background-color: white;
+    margin-top: -7px;
+}
+
+.Price_item{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    margin-left: 200px;
+
+}
+
+.item_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+
+.Add_cart{
+    margin-right: 150px;
+    color: white;
+    background-color: black;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.Go_back {
+    text-decoration: none;
+    color: black;
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
