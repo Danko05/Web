@@ -1,0 +1,90 @@
+.hero2__title {
+
+    text-align: center;
+    margin-top: 30vh;
+
+}
+
+.hero2__title2 {
+
+    text-align: center;
+
+}
+
+.container3 {
+    width: 70%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 18%;
+    margin-top: 5%;
+
+
+}
+
+.card {
+    width: 25%;
+    height: 50%;;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 0px #7D7987 ;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+}
+
+.card__photo {
+    width: 100%;
+    height: 40%;
+
+
+}
+
+
+.card__text p {
+    color: #7D7987;
+}
+
+#vector {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    height: 50%;
+    margin-top: -5%;
+}
+
+.card__button {
+    background: transparent;
+    color: #458FF6;
+    width: 100px;
+    height: 56px;
+    margin-top: 2vh;
+}
+
+.card__button img{
+
+    width: 12%;
+
+}
+
+.card__button2 {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.card__button3 {
+    background: transparent;
+    border-radius: 40px;
+    color: #458FF6;
+    width: 200px;
+    height: 56px;
+    border: 2px solid #458FF6;
+    margin: 5%;
+
+}
