@@ -1,0 +1,29 @@
+.shopping_button{
+    display:flex;
+    justify-content: space-between;
+}
+.Back_to_catalog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 30px;
+    width: 130px;
+    margin-left: 70px;
+}
+.Continue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 30px;
+    width: 110px;
+    background-color: #282c34;
+    margin-right: 70px;
+}

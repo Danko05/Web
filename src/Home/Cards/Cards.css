@@ -1,0 +1,83 @@
+
+.Card-shoes{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Card-shoes1,
+.Card-shoes2,
+.Card-shoes3,
+.Card-shoes4,
+.Card-shoes5,
+.Card-shoes6,
+.Card-shoes7,
+.Card-shoes8{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px #888;
+    padding: 20px;
+    background-color: #fff;
+    width: 200px;
+    height: 300px;
+    margin-top: 100px;
+
+}
+.Card-title1,
+.Card-title2,
+.Card-title3,
+.Card-title4,
+.Card-title5,
+.Card-title6,
+.Card-title7,
+.Card-title8{
+    color: black;
+    font-size: 20px;
+}
+.Card-text1,
+.Card-text2,
+.Card-text3,
+.Card-text4,
+.Card-text5,
+.Card-text6,
+.Card-text7,
+.Card-text8{
+    color: darkgray;
+    font-size: 13px;
+}
+
+.Card-shoes1 img,
+.Card-shoes2 img,
+.Card-shoes3 img,
+.Card-shoes4 img,
+.Card-shoes5 img,
+.Card-shoes6 img,
+.Card-shoes7 img,
+.Card-shoes8 img {
+    width: 200px;
+    height: 120px;
+}
+
+.Card-shoes1,
+.Card-shoes2,
+.Card-shoes3,
+.Card-shoes4,
+.Card-shoes5,
+.Card-shoes6,
+.Card-shoes7,
+.Card-shoes8{
+    margin: 60px;
+}
+
+image{
+    width: 200px;
+    height: 120px;
+}
+
+
+
+.View_more{
+    display: flex;
+    flex-direction: column;
+}

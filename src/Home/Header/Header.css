@@ -1,0 +1,43 @@
+.active{
+    width: 70px;
+    padding: 7px;
+    border-radius: 20px;
+    background-color: darkgrey;
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-left:450px;
+
+}
+.nav-list li {
+    margin: 0 30px;
+}
+.nav-list a {
+    text-decoration: none;
+    color:black;
+    width: 70px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+
+}
+.header-logo{
+    padding-left: 30px;
+    width: 60px;
+    height: 60px;
+
+}
+
+.header-logo img{
+    display:flex;
+    width: 100%;
+
+}
+
+
+
+
