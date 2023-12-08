@@ -1,0 +1,73 @@
+.checkout_title{
+    display: flex;
+    justify-content: center;
+}
+.Named{
+    display: flex;
+    margin-top: 30px;
+}
+.Email_photo{
+    display: flex;
+}
+.Checkout{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.First_name_container{
+    margin-right: 20px;
+}
+.Last_name_container{
+    margin-left: 20px;
+}
+.Email_container{
+    margin-right: 20px;
+}
+.Phone_container{
+    margin-left: 20px;
+}
+.checkout_input{
+    border-radius: 5px;
+    margin-top: -20px;
+    height: 21px;
+}
+.input_addres{
+    border-radius: 5px;
+    width: 370px;
+    height: 21px;
+}
+.checkout_button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    width: 1400px;
+}
+.Checkout_Go_back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 37px;
+    width: 100px;
+    margin-left: 70px;
+}
+.Checkout_Continue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
+    background-color: #282c34;
+    margin-right: 70px;
+}
+.error-message{
+    color: red;
+}

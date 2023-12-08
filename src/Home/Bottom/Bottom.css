@@ -1,0 +1,39 @@
+.horizontal-line2{
+    margin-top: 70px;
+}
+
+.Bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Bottom-title{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin: inherit;
+    margin-right: 380px;
+}
+.Bottom-text{
+    font-size: 12px;
+    color:darkgray;
+}
+
+
+
+.Bottom-icon{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+
+}
+.Bottom-icon img{
+    height: 25px;
+    margin-left:10px
+}
+.Bottom-logo img{
+    height: 60px;
+    margin-right: 340px;
+}

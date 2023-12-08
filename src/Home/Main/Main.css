@@ -1,0 +1,26 @@
+.Main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+.Main-pharagraph{
+    display: flex;
+    flex-direction: column;
+}
+.Main-title{
+    color:black;
+    font-size: 30px;
+}
+.Main-text{
+    color:darkgray;
+    font-size: 15px;
+}
+.Main img{
+    width: 450px;
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
